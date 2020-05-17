@@ -1,4 +1,3 @@
-console.log('client side js file is loaded')
 
 //Selecting elements by there name
 const weatherForm = document.querySelector('form')

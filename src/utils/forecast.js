@@ -10,7 +10,7 @@ const forecast = (latitude,longitude,callback)=>{
         } else if(body.error){
             callback('Unable to fetch the data',undefined)
         } else{
-            callback(undefined,body.current.weather_descriptions[0]+". It is currently " + body.current.temperature+ " degrees out. It feels like " + body.current.feelslike +" degrees out")
+            callback(undefined,body.current.weather_descriptions[0]+". It is currently " + body.current.temperature+ " degrees out. It feels like " + body.current.feelslike +" degrees out, with a humidity of " + body.current.humidity + '        '+'('+ 'Wind Speed: ' + body.current.wind_speed + ", " + 'Wind direction: ' + body.current.wind_dir + ')')
         }
     })
     
